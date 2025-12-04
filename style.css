@@ -14,7 +14,10 @@ body{
     align-items: center;
     border-bottom: 1px solid black ;
     gap: 10px;
-
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1__title{
@@ -35,6 +38,7 @@ body{
     border: none;
     width: 100%;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .navbar__s2 input:focus{
@@ -45,6 +49,47 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+/* My learning popup */
+.mylearning{
+ position: relative;
+ cursor: pointer;
+}
+.mylearning__popup{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    right: 0;
+    top: 40px;
+    border:#A435F0 0.5px solid;
+    border-radius: 10px;
+    display: none;
+}
+.mylearning:hover .mylearning__popup{
+    display: block;
+}
+
+.mylearning h2{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+}
+.mylearning button{
+    background-color: transparent;
+    color: #6d26d1;
+    border:#6d26d1 1px solid;
+    padding: 10px 80px;
+    text-wrap: nowrap;
+    margin-top: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.mylearning button:hover{
+    background-color: #EDE6F9;
 }
 
 .categories{
@@ -61,8 +106,30 @@ body{
     cursor: pointer;
 }
 
+.sale-image{
+    position: relative;
+}
+
 .sale-image img{
     width: 100%;
+}
+
+.sale-image__offer{
+    width: 30%;
+    background-color: white;
+    padding: 25px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.sale-image__offer h2{
+   font-size: 32px;
+   font-weight: 100;
+}
+
+.sale-image__offer p{
+    color: rgb(143, 142, 142);
 }
 
 .recommended{
