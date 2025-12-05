@@ -99,11 +99,13 @@ body{
     justify-content: space-around;
     font-weight: 100;
     color: rgb(155, 149, 149);
+    cursor: pointer;
 }
 
 .categories p:hover{
+    transition: 1s;
     color: #A435F0;
-    cursor: pointer;
+    
 }
 
 .sale-image{
@@ -121,7 +123,23 @@ body{
     position: absolute;
     top: 20px;
     left: 50px;
+    animation: zoom 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 .sale-image__offer h2{
    font-size: 32px;
